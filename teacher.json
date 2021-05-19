@@ -1,0 +1,36 @@
+{
+    "teachers_det": [
+        {
+            "name": "MEGAT FAHMI",
+            "age": 25,
+            "ID": "25937",
+            "password": "fkfbkd"
+        },
+        {
+            "name": "SHARAF",
+            "age": 45,
+            "ID": "25211",
+            "password": "qwerty"
+        },
+        {
+            "name": "QAYYUM",
+            "age": 24,
+            "ID": "25361",
+            "password": "asdfgj"
+        },
+        {
+            "name": "ALIF",
+            "age": 33,
+            "ID": "27160",
+            "password": "asdfgh"
+        }
+    ],
+    "admin_det": [
+        {
+            "name": "THAMIZHARAASAN",
+            "age": 19,
+            "ID": "20129",
+            "password": "thamizh020626"
+        }
+    ]
+}

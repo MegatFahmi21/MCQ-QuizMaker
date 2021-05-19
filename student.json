@@ -1,0 +1,28 @@
+{
+    "students_det": [
+        {
+            "name": "JAGANATHA RAO",
+            "age": "18",
+            "ID": "12011",
+            "password": "87654321"
+        },
+        {
+            "name": "BAYMAX",
+            "age": 23,
+            "ID": "17144",
+            "password": "dfgngnj"
+        },
+        {
+            "name": "PRANJIVVAN",
+            "age": 16,
+            "ID": "15064",
+            "password": "yjwrtgfb123"
+        },
+        {
+            "name": "DHARVIN",
+            "age": 17,
+            "ID": "18952",
+            "password": "fgfkthkd"
+        }
+    ]
+}
