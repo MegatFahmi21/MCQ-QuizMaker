@@ -650,6 +650,4 @@ def main():
 # b= random.randint(600000,699999)  for quiz ID
 # print(b)
 
-# main()
-
-admin()
+main()
