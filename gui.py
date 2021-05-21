@@ -647,7 +647,50 @@ def main():
 
 #main()
 
-# b= random.randint(600000,699999)  for quiz ID
-# print(b)
 
-main()
+
+#create new quiz
+def create():
+    qname = input("Enter the quiz name : ").upper()
+    qtopic = input("Enter the quiz topic : ").upper()
+    q_ques = input("Status (DRAFT/PUBLISHED) : ").upper()
+
+    dictionary_quiz ={
+    "Quizname" : qname,
+    "topic" : qtopic,
+    "QuizID" : f'{random.randint(600000,699999)}',
+    "status" : q_ques
+    }
+
+
+    #read quiz.json file
+    with open('quiz.json', 'r') as f_quiz:
+        db_quiz = json.load(f_quiz)
+
+    # # Add a new quiz
+    db_quiz['quiz_det'].append(dictionary_quiz)
+
+    #write the updated quiz.json file
+    with open('quiz.json', 'w') as f_quiz:
+        json.dump(db_quiz, f_quiz, indent=4)
+
+
+
+
+#read quiz.json file
+with open('quiz.json', 'r') as f_quiz:
+    db_quiz = json.load(f_quiz)
+
+count = 0
+for quiz in db_quiz["quiz_det"]:
+    count += 1
+
+    print(f'\nQuiz #{count}')
+    print(f'-Quiz Name = {quiz["Quizname"]}')
+    print(f'-Topic     = {quiz["topic"]}')
+    print(f'-Quiz ID   = {quiz["QuizID"]}')
+    print(f'-Status    = {quiz["status"]}')		
+ins = input("Press 'ENTER' to back to home page")
+
+
+
