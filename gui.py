@@ -674,23 +674,24 @@ def create():
     with open('quiz.json', 'w') as f_quiz:
         json.dump(db_quiz, f_quiz, indent=4)
 
+main()
 
+def show_quiz():
 
+    #read quiz.json file
+    with open('quiz.json', 'r') as f_quiz:
+        db_quiz = json.load(f_quiz)
 
-#read quiz.json file
-with open('quiz.json', 'r') as f_quiz:
-    db_quiz = json.load(f_quiz)
+    count = 0
+    for quiz in db_quiz["quiz_det"]:
+        count += 1
 
-count = 0
-for quiz in db_quiz["quiz_det"]:
-    count += 1
-
-    print(f'\nQuiz #{count}')
-    print(f'-Quiz Name = {quiz["Quizname"]}')
-    print(f'-Topic     = {quiz["topic"]}')
-    print(f'-Quiz ID   = {quiz["QuizID"]}')
-    print(f'-Status    = {quiz["status"]}')		
-ins = input("Press 'ENTER' to back to home page")
+        print(f'\nQuiz #{count}')
+        print(f'-Quiz Name = {quiz["Quizname"]}')
+        print(f'-Topic     = {quiz["topic"]}')
+        print(f'-Quiz ID   = {quiz["QuizID"]}')
+        print(f'-Status    = {quiz["status"]}')		
+    ins = input("Press 'ENTER' to back to home page")
 
 
 
